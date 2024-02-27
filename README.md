@@ -1,5 +1,4 @@
-# The Band Website
-Website for music band - The Band
+# ONE OK ROCK Band Website
 Technologies uses: HTML, CSS, JS
 **Function**
 - Describe band
