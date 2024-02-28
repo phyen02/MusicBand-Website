@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: gray;
+}
+
+#header{
+    height: 46px;
+    width: 100%;
+    background-color: #000;
+}
+
+#nav{
+    
+}
+
+#nav li{
+    display: block;
+    position: relative;
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav > li > a{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* gộp 2 selector có trùng css */
+#nav .subnav li:hover,
+#nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+
+#nav .subnav{
+    /* display: none; */
+    position: absolute;
+    color: #000;
+    background-color: #fff;
+    padding: 0 12px;
+}
+
+#nav .subnav a{
+    color: #000;
+
+}
+
+#footer{
+
+}
+
+#content{
+
+}
+
+#slider{
+
+}
