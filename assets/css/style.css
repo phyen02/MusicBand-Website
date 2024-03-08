@@ -6,17 +6,33 @@
 
 html {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: gray;
 }
 
 #header{
     height: 46px;
     width: 100%;
     background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-#nav{
-    
+#header #nav-search{
+    float: right;
+    font-size: 20px;
+    color: #fff;
+    line-height: 46px;
+    padding: 0 21px;
+    cursor: pointer;
+}
+
+#header #nav-search:hover{
+    background-color: #f44336;
+    color: #000;
+}
+
+#nav {
+    display: inline-block;
 }
 
 #nav li{
@@ -48,17 +64,30 @@ html {
     background-color: #ccc;
 }
 
+#nav li:hover .subnav{
+    display: block;
+}
+
 #nav .subnav{
-    /* display: none; */
+    display: none;
     position: absolute;
     color: #000;
     background-color: #fff;
-    padding: 0 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 #nav .subnav a{
     color: #000;
+}
 
+#nav .nav-arrow-down{
+    font-size: 14px;
+    color: #fff;
+}
+
+#nav .nav-arrow-down:hover{
+    font-size: 14px;
+    color: #000;
 }
 
 #footer{
@@ -70,5 +99,47 @@ html {
 }
 
 #slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/bg-cat-1.jpg') top center / cover no-repeat;   
+    position: relative;
 
+}
+/* Cách 1 */
+#slider .text-content{
+    color: #fff;
+    position: absolute;
+    bottom: 57px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/*  Cách 2 */
+/* #slider .text-content{
+    color: #fff;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+} */
+
+/* Cách 3 */
+/* #slider .text-content{
+    color: #fff;
+    position: absolute;
+    bottom: 47px;
+    left: 0;
+    right: 0;
+    text-align: center;
+} */
+
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-description{
+    font-weight: 500;
+    font-size: 15px;
 }
