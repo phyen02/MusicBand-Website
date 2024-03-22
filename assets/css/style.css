@@ -5,7 +5,7 @@
 }
 
 html {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .clear{
@@ -22,7 +22,7 @@ html {
     background-color: #000;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 500;
 }
 
 #header #nav-search{
@@ -101,7 +101,8 @@ html {
 #slider{
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/bg-cat-1.jpg') top center / cover no-repeat;
+    background: url('/assets/img/bg-cat-2.jpg') top center / contain no-repeat;
+    background-color: #000;
     position: relative;
 }
 /* Cách 1 */
@@ -141,6 +142,7 @@ html {
 #slider .text-description{
     font-weight: 500;
     font-size: 15px;
+    line-height: 2;
 }
 
 /* Content section */
@@ -156,7 +158,7 @@ html {
     margin-right: auto;
 }
 
-#content .content-section .section-heading{
+#content .section-heading{
     font-size: 30px;
     letter-spacing: 6px;
 }
@@ -268,7 +270,7 @@ html {
 }
 
 .place-list .place-heading{
-
+    
 }
 
 .place-list .place-time{
@@ -281,22 +283,190 @@ html {
     line-height: 1.4;
 }
 
-.place-list .place-buy-btn{
+.place-list .btn.s-full-width{
     color: #fff;
     background-color: #000;
-    text-decoration: none;
     padding: 11px 16px;
     display: inline-block;
     margin-top: 15px;
+    font-size: 15px;
 }
 
-.place-buy-btn:hover{
-    color:#000;
-    background-color: #ccc;
+.btn.s-full-width:hover{
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 /* Footer section */
 
 #footer{
 
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal .modal-container{
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    position: relative;
+    animation: modalFade ease 0.5s;
+}
+
+.modal .modal-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 8px 16px;
+}
+
+.modal .modal-close:hover{
+    background-color: #ccc;
+    color:#000;
+    cursor: pointer;
+}
+
+.modal .modal-header{
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.modal .modal-body{
+    padding: 16px;
+}
+
+.modal .modal-label{
+    display: block;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.modal .modal-input{
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.modal .modal-pay-btn{
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    padding: 16px;
+    margin: 16px 0;
+    text-transform: uppercase;
+}
+
+.modal .modal-pay-btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal .modal-footer{
+    margin: 15px 0;
+    float: right;
+    font-size: 15px;
+}
+
+/* Contact Section */
+.row{
+    margin: 0 -8px;
+}
+
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.mt-8{
+    margin-top: 8px !important;
+}
+
+.mt-16{
+    margin-top: 16px !important;
+}
+
+.col{
+    float: left;
+    padding: 0 8px;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.contact-section{
+    margin-top: 48px;
+}
+
+.contact-info{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 8px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.contact-form .btn-submit-contact{
+    float: right;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+
+.contact-form .btn-submit-contact:hover{
+    color: #000;
+    background-color: #ccc;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
