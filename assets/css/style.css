@@ -1,75 +1,50 @@
+/* Reset default styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html {
-    font-family: 'Segoe UI', Arial, sans-serif;
+html{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.clear{
-    clear: both;
-}
-
-.text-white {
-    color: #fff !important;
-}
-
+/* SECTION: Header styles */
 #header{
-    height: 46px;
-    width: 100%;
-    background-color: #000;
+    height: 46.5px;
+    background: #000000;
     position: fixed;
     top: 0;
-    z-index: 500;
+    left: 0;
+    right: 0;
 }
 
-#header #nav-search{
-    float: right;
-    font-size: 20px;
+#nav{
+    display:inline-block;
+}
+
+#nav > li > a{
     color: #fff;
-    line-height: 46px;
-    padding: 0 21px;
-    cursor: pointer;
 }
 
-#header #nav-search:hover{
-    background-color: #f44336;
+#nav > li > a{
+    line-height: 46.5px;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav > li:hover > a{
+    background-color: #ccc;
     color: #000;
-}
-
-#nav {
-    display: inline-block;
-}
-
-#nav li{
-    display: block;
-    position: relative;
 }
 
 #nav > li{
     display: inline-block;
 }
 
-#nav li a{
-    color: #fff;
-    text-decoration: none;
-    line-height: 46px;
-    padding: 0 24px;
-    display: block;
-}
-
-#nav > li > a{
-    color: #fff;
-    text-transform: uppercase;
-}
-
-/* gộp 2 selector có trùng css */
-#nav .subnav li:hover,
-#nav > li:hover > a{
-    color: #000;
-    background-color: #ccc;
+#nav li{
+    position: relative;
 }
 
 #nav li:hover .subnav{
@@ -77,396 +52,49 @@ html {
 }
 
 #nav .subnav{
+    position: absolute;
+    background-color: #fff;
     display: none;
-    position: absolute;
-    color: #000;
+    list-style: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    top: 99%;
+}
+
+#nav .subnav li a{
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-#nav .subnav a{
     color: #000;
-}
-
-#nav .nav-arrow-down{
-    font-size: 14px;
-    color: #fff;
-}
-
-#nav .nav-arrow-down:hover{
-    font-size: 14px;
-    color: #000;
-}
-
-#slider{
-    margin-top: 46px;
-    padding-top: 50%;
-    background: url('/assets/img/bg-cat-2.jpg') top center / contain no-repeat;
-    background-color: #000;
-    position: relative;
-}
-/* Cách 1 */
-#slider .text-content{
-    color: #fff;
-    position: absolute;
-    bottom: 57px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-/*  Cách 2 */
-/* #slider .text-content{
-    color: #fff;
-    position: absolute;
-    bottom: 47px;
-    width: 100%;
-    text-align: center;
-} */
-
-/* Cách 3 */
-/* #slider .text-content{
-    color: #fff;
-    position: absolute;
-    bottom: 47px;
-    left: 0;
-    right: 0;
-    text-align: center;
-} */
-
-#slider .text-heading{
-    font-weight: 500;
-    font-size: 24px;
-}
-
-#slider .text-description{
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 2;
-}
-
-/* Content section */
-
-#content{
-
-}
-
-#content .content-section{
-    width: 800px;
-    padding: 64px 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#content .section-heading{
-    font-size: 30px;
-    letter-spacing: 6px;
-}
-
-#content .content-section .section-subheading{
-    font-style: italic;
-    font-size: 15px;
-    font-weight: 500;
-    margin: 25px 0;
-    opacity: 0.8;
-}
-
-#content .content-section .section-heading,
-#content .content-section .section-subheading{
-    text-align: center;
-}
-
-#content .about-text{
-    font-size: 15px;
-    text-align: justify;
-    line-height: 1.5;
-}
-
-#content .member-list{
-    margin-top: 32px;
-}
-
-#content .member-item{
-    float: left;
-    width: calc(100% / 3);
-    text-align: center;
-}
-
-#content .member-name{
-    font-size: 15px;
-    margin-bottom: 15px;
-}
-
-#content .member-img{
-    margin-bottom: 15px;
-    margin-top: 15px;
-    width: 154px;
-    height: 155px;
-    border-radius: 5px;
-}
-
-/* Tour section */
-#tour{
-    background-color: #000;
-}
-
-.tickets-list{
-    background-color: #fff;
-    margin-top: 40px;
-}
-
-.tickets-list li{
-    font-size: 15px;
-    padding: 11px 16px;
-    border-bottom: 1px solid #ddd;
-    color: #757575;
-    list-style-type: none;
-}
-
-.tickets-list .sold-out{
-    background-color: #f44336;
-    color: #fff;
-    padding: 3px 4px;
-    margin-left: 16px
-}
-
-.tickets-list .ticket-left{
-    float: right;
-    width: 24px;
-    height: 24px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 24px;
-    margin: -3;
-}
-
-.place-list{
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
-}
-
-.place-list .place-item{
-    float: left;
-    width: calc(100%/3);
-    padding: 0 8px;
-}
-
-.place-list .place-img{
-    width: 100%;
     display: block;
-}
-
-.place-img:hover{
-    opacity: 0.6;
-}
-
-.place-list .place-body{
-    background-color: #fff;
-    padding: 16px;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.place-list .place-heading{
-    
-}
-
-.place-list .place-time{
-    margin-top: 15px;
-    color: #757575;
-}
-
-.place-list .place-des{
-    margin-top: 15px;
-    line-height: 1.4;
-}
-
-.place-list .btn.s-full-width{
-    color: #fff;
-    background-color: #000;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 15px;
-}
-
-.btn.s-full-width:hover{
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-/* Footer section */
-
-#footer{
-
-}
-
-.modal{
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.3);
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal.open {
-    display: flex;
-}
-
-.modal .modal-container{
-    background-color: #fff;
-    width: 900px;
-    max-width: calc(100% - 32px);
-    position: relative;
-    animation: modalFade ease 0.5s;
-}
-
-.modal .modal-close{
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: #fff;
+    text-decoration: none;
+    line-height: 46.5px;
     padding: 8px 16px;
+    line-height: 22.5px;
 }
 
-.modal .modal-close:hover{
+#nav .subnav li:hover a{
     background-color: #ccc;
-    color:#000;
-    cursor: pointer;
 }
 
-.modal .modal-header{
-    background-color: #009688;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 30px;
-}
 
-.modal .modal-body{
-    padding: 16px;
-}
-
-.modal .modal-label{
-    display: block;
-    font-size: 15px;
-    margin: 15px 0;
-}
-
-.modal .modal-input{
-    border: 1px solid #ccc;
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-}
-
-.modal .modal-pay-btn{
-    width: 100%;
-    background-color: #009688;
-    color: #fff;
-    padding: 16px;
-    margin: 16px 0;
-    text-transform: uppercase;
-}
-
-.modal .modal-pay-btn:hover{
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.modal .modal-footer{
-    margin: 15px 0;
-    float: right;
-    font-size: 15px;
-}
-
-/* Contact Section */
-.row{
-    margin: 0 -8px;
-}
-
-.row::after{
-    content: "";
-    display: block;
-    clear: both;
-}
-
-.mt-8{
-    margin-top: 8px !important;
-}
-
-.mt-16{
-    margin-top: 16px !important;
-}
-
-.col{
-    float: left;
-    padding: 0 8px;
-}
-
-.col-half{
-    width: 50%;
-}
-
-.col-full{
-    width: 100%;
-}
-
-.contact-section{
-    margin-top: 48px;
-}
-
-.contact-info{
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.contact-info i[class*="ti-"]{
-    width: 30px;
+#header .search-btn{
     display: inline-block;
-}
-
-.contact-form{
-    font-size: 15px;
-}
-
-.contact-form .form-control{
-    padding: 8px;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-.contact-form .btn-submit-contact{
+    line-height: 46.5px;
     float: right;
-    background: #000;
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    font-size: 15px;
+    padding: 0 16px;
 }
 
-.contact-form .btn-submit-contact:hover{
-    color: #000;
-    background-color: #ccc;
-    border: 1px solid #000;
+#header .search-btn:hover{
+    background-color: #ff0000;
     cursor: pointer;
 }
 
-@keyframes modalFade {
-    from {
-        opacity: 0;
-        transform: translateY(-140px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.ti-search{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* SECTION: Slider styles */
+.slider{
+    width: 100%;
+    height: 10000px;
+    background-color: #333;
 }
